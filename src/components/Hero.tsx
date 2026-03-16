@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Star, Calendar, MessageCircle, CheckCircle2, ChevronDown } from "lucide-react";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 30 },
@@ -37,7 +38,7 @@ const Hero = () => {
         background: `
           radial-gradient(ellipse 70% 70% at 80% 50%, rgba(26,58,143,0.25) 0%, transparent 60%),
           radial-gradient(ellipse 50% 80% at 10% 80%, rgba(37,99,235,0.1) 0%, transparent 50%),
-          #0D1B2A
+          hsl(var(--navy-dark))
         `,
       }}
     >
@@ -52,17 +53,17 @@ const Hero = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] pt-32 pb-20 flex items-center">
         {/* Left content */}
-        <div className="max-w-[700px]">
+        <div className="max-w-[700px] max-lg:mx-auto max-lg:text-center">
           <motion.div {...fadeUp(0.1)}>
-            <span className="inline-flex items-center bg-[rgba(37,99,235,0.15)] border border-[rgba(37,99,235,0.35)] px-4 py-[7px] rounded-full text-[0.78rem] font-body font-semibold tracking-[1px] text-blue-light uppercase">
-              ⭐ 5-Star Rated Laundromat in Centurion
+            <span className="inline-flex items-center gap-2 bg-[rgba(37,99,235,0.15)] border border-[rgba(37,99,235,0.35)] px-4 py-[7px] rounded-full text-[0.78rem] font-body font-semibold tracking-[1px] text-blue-light uppercase">
+              <Star size={14} fill="hsl(var(--gold))" stroke="hsl(var(--gold))" /> 5-Star Rated Laundromat in Centurion
             </span>
           </motion.div>
 
           <motion.h1
             {...fadeUp(0.2)}
-            className="font-display font-black mt-6 leading-[1.1]"
-            style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
+            className="font-display mt-6 leading-[1.05] tracking-[2px]"
+            style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}
           >
             Centurion's Trusted<br />
             Laundromat &<br />
@@ -71,32 +72,32 @@ const Hero = () => {
 
           <motion.p
             {...fadeUp(0.3)}
-            className="mt-6 text-white/[0.65] text-[1.05rem] leading-[1.7] max-w-[560px] font-body"
+            className="mt-6 text-white/[0.65] text-[1.05rem] leading-[1.7] max-w-[560px] font-body max-lg:mx-auto"
           >
             Professional wash & fold, ironing, sneaker cleaning, and carpet cleaning — with convenient collection & delivery throughout Centurion, Wierdapark, Eldoraigne, Rooihuiskraal, Midstream and surrounding areas.
           </motion.p>
 
-          <motion.div {...fadeUp(0.4)} className="mt-8 flex flex-wrap gap-4">
+          <motion.div {...fadeUp(0.4)} className="mt-8 flex flex-wrap gap-4 max-lg:justify-center max-sm:flex-col">
             <button
               onClick={scrollToBooking}
-              className="bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:-translate-y-[2px] transition-transform"
+              className="inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:-translate-y-[2px] hover:shadow-[0_12px_40px_rgba(37,99,235,0.5)] transition-all"
             >
-              🚗 Schedule My Pickup
+              <Calendar size={18} /> Schedule My Pickup
             </button>
             <a
               href="https://wa.me/27796388572"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-[1.5px] border-white/30 text-white font-body font-bold px-8 py-4 rounded-lg hover:border-blue-light hover:text-blue-light transition-colors"
+              className="inline-flex items-center gap-2 border-[1.5px] border-white/30 text-white font-body font-bold px-8 py-4 rounded-lg hover:border-blue-light hover:text-blue-light transition-colors"
             >
-              💬 WhatsApp Us
+              <MessageCircle size={18} /> WhatsApp Us
             </a>
           </motion.div>
 
-          <motion.div {...fadeUp(0.5)} className="mt-8 flex flex-wrap gap-4">
+          <motion.div {...fadeUp(0.5)} className="mt-8 flex flex-wrap gap-4 max-lg:justify-center">
             {trustBadges.map((badge) => (
               <div key={badge} className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-[rgba(37,99,235,0.2)] flex items-center justify-center text-white text-[0.6rem]">✓</span>
+                <CheckCircle2 size={16} className="text-blue-light" />
                 <span className="text-white/[0.55] text-[0.82rem] font-body">{badge}</span>
               </div>
             ))}
@@ -111,8 +112,8 @@ const Hero = () => {
               {...slideRight(0.3 + i * 0.15)}
               className="bg-white/[0.06] backdrop-blur-[10px] border border-white/[0.1] rounded-[14px] p-5 px-6 text-center min-w-[140px]"
             >
-              <div className="font-display font-black text-2xl text-blue-light">{stat.value}</div>
-              <div className="text-white/50 text-[0.78rem] font-body mt-1">{stat.label}</div>
+              <div className="font-display text-[2.5rem] text-blue-light leading-none tracking-[1px]">{stat.value}</div>
+              <div className="text-white/50 text-[0.72rem] font-body mt-2 uppercase tracking-[1px]">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -120,9 +121,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-scroll">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2">
-          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-        </svg>
+        <ChevronDown size={24} className="text-white/40" />
       </div>
     </section>
   );

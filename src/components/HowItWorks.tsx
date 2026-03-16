@@ -8,11 +8,11 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="py-20 px-4 bg-navy-dark">
+  <section id="how-it-works" className="py-20 max-sm:py-12 px-4 bg-navy-dark">
     <div className="max-w-6xl mx-auto text-center">
-      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3 !text-blue-light">SIMPLE PROCESS</p>
-        <h2 className="font-display font-black text-white" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
+        <h2 className="font-display text-white tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           Fresh Laundry in 4 Easy Steps
         </h2>
         <p className="mt-4 text-white/50 font-body max-w-xl mx-auto">
@@ -22,21 +22,21 @@ const HowItWorks = () => (
 
       <div className="mt-16 relative grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Connector line — desktop only */}
-        <div className="hidden md:block absolute top-[30px] left-[12.5%] right-[12.5%] h-[2px] border-t-2 border-dashed border-[rgba(37,99,235,0.2)]" />
+        <div className="hidden md:block absolute top-[30px] left-[12.5%] right-[12.5%] h-0 border-t border-dashed border-[rgba(37,99,235,0.3)]" />
 
         {steps.map((step, i) => (
           <motion.div
             key={step.num}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="relative text-center px-5"
           >
             <div className="relative z-10 w-[60px] h-[60px] bg-blue-bright rounded-full flex items-center justify-center mx-auto">
-              <span className="font-display font-black text-white text-[1.4rem]">{step.num}</span>
+              <span className="font-display text-white text-[1.8rem] leading-none">{step.num}</span>
             </div>
-            <h3 className="font-display font-bold text-white text-[1.1rem] mt-[22px]">{step.title}</h3>
+            <h3 className="font-display text-white text-[1.3rem] mt-[22px] tracking-[1px]">{step.title}</h3>
             <p className="text-white/[0.45] font-body text-[0.85rem] leading-[1.7] mt-2">{step.desc}</p>
           </motion.div>
         ))}

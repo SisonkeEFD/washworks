@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
+import { ArrowLeftRight, ArrowRight, Calendar } from "lucide-react";
 
 const galleryItems = [
   { before: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80", after: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80", caption: "Sneaker Cleaning in Centurion" },
@@ -40,47 +41,43 @@ const BeforeAfterSlider = ({ before, after, caption }: { before: string; after: 
         onTouchStart={onMouseDown}
         onTouchEnd={onMouseUp}
       >
-        {/* After (full) */}
         <img src={after} alt="After" className="absolute inset-0 w-full h-full object-cover" />
-        {/* Before (clipped) */}
         <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
           <img src={before} alt="Before" className="w-full h-full object-cover" />
         </div>
 
-        {/* Labels */}
-        <span className="absolute top-3 left-3 bg-black/50 text-white text-[0.7rem] font-bold uppercase px-[10px] py-1 rounded font-body">Before</span>
-        <span className="absolute top-3 right-3 bg-black/50 text-white text-[0.7rem] font-bold uppercase px-[10px] py-1 rounded font-body">After</span>
+        <span className="absolute top-3 left-3 bg-black/55 text-white text-[0.7rem] font-bold uppercase px-[10px] py-1 rounded font-body">Before</span>
+        <span className="absolute top-3 right-3 bg-black/55 text-white text-[0.7rem] font-bold uppercase px-[10px] py-1 rounded font-body">After</span>
 
-        {/* Divider line + handle */}
         <div className="absolute top-0 bottom-0 w-[2px] bg-white/80" style={{ left: `${pos}%` }} />
         <div
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg"
           style={{ left: `${pos}%` }}
         >
-          <span className="text-blue-primary font-bold text-xs">← →</span>
+          <ArrowLeftRight size={18} className="text-blue-primary" />
         </div>
       </div>
-      <p className="mt-3 font-body font-semibold text-text-dark text-sm">{caption}</p>
+      <p className="mt-3 font-display text-[1.1rem] text-navy-dark tracking-[1px]">{caption}</p>
       <button
         onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}
-        className="text-blue-bright text-sm font-body font-medium mt-1 hover:underline"
+        className="group/cta inline-flex items-center gap-1.5 text-blue-bright text-[0.82rem] font-body font-semibold mt-1 hover:text-blue-primary transition-colors"
       >
-        Book This Service →
+        Book This Service <ArrowRight size={14} className="group-hover/cta:translate-x-1 transition-transform" />
       </button>
     </div>
   );
 };
 
 const Gallery = () => (
-  <section id="gallery" className="py-20 px-4 bg-blue-ice">
+  <section id="gallery" className="py-20 max-sm:py-12 px-4 bg-blue-ice">
     <div className="max-w-7xl mx-auto text-center">
-      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3">THE RESULTS</p>
-        <h2 className="font-display font-black text-text-dark" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
+        <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           The Results Speak for Themselves
         </h2>
         <p className="mt-4 text-text-muted font-body max-w-xl mx-auto">
-          Before and after — every time. Drag the slider to see the transformation.
+          Drag the slider to see the transformation.
         </p>
       </motion.div>
 
@@ -90,7 +87,7 @@ const Gallery = () => (
             key={item.caption}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
             <BeforeAfterSlider {...item} />
@@ -101,9 +98,9 @@ const Gallery = () => (
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12">
         <button
           onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}
-          className="bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:-translate-y-[2px] transition-transform"
+          className="inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:-translate-y-[2px] transition-all"
         >
-          📅 Book Your Transformation Today
+          <Calendar size={18} /> Book Your Transformation Today
         </button>
       </motion.div>
     </div>
