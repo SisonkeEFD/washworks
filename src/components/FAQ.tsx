@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   { q: "Do you offer laundry collection and delivery in Centurion?", a: "Yes! We serve Centurion and all surrounding suburbs including Wierdapark, Eldoraigne, Rooihuiskraal, Midstream, Highveld, Lyttelton and more. Simply book a pickup and we'll come to you." },
@@ -16,11 +17,11 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 px-4 bg-blue-ice">
+    <section id="faq" className="py-20 max-sm:py-12 px-4 bg-blue-ice">
       <div className="max-w-6xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-12">
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center mb-12">
           <p className="section-label mb-3">COMMON QUESTIONS</p>
-          <h2 className="font-display font-black text-text-dark" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
+          <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Frequently Asked Questions About Our Laundromat in Centurion
           </h2>
           <p className="mt-4 text-text-muted font-body max-w-xl mx-auto">
@@ -34,7 +35,7 @@ const FAQ = () => {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="bg-white rounded-[14px] border border-black/[0.06] overflow-hidden"
             >
@@ -42,9 +43,9 @@ const FAQ = () => {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 px-6 text-left"
               >
-                <span className="font-body font-bold text-[0.9rem] text-text-dark pr-4">{faq.q}</span>
-                <span className="text-blue-primary text-[1.3rem] flex-shrink-0 font-bold">
-                  {openIndex === i ? "−" : "+"}
+                <span className="font-body font-bold text-[0.9rem] text-navy-dark pr-4">{faq.q}</span>
+                <span className="text-blue-primary flex-shrink-0">
+                  {openIndex === i ? <Minus size={20} /> : <Plus size={20} />}
                 </span>
               </button>
               <AnimatePresence>

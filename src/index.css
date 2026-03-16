@@ -33,7 +33,7 @@
     --ring: 222 70% 33%;
     --radius: 0.5rem;
 
-    /* Brand colors */
+    /* Brand colors — HSL */
     --blue-primary: 222 70% 33%;
     --blue-bright: 220 91% 54%;
     --blue-ice: 220 100% 96%;
@@ -68,20 +68,21 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bebas Neue', sans-serif;
   }
 }
 
 @layer utilities {
   .section-label {
-    @apply text-xs font-bold uppercase tracking-[3px];
+    @apply text-xs font-bold uppercase;
     font-family: 'DM Sans', sans-serif;
-    color: hsl(var(--blue-primary));
+    letter-spacing: 4px;
     font-size: 0.72rem;
+    color: hsl(var(--blue-primary));
   }
 
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bebas Neue', sans-serif;
   }
 
   .font-body {
@@ -96,7 +97,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 28s linear infinite;
 }
 
 /* Scroll bounce */

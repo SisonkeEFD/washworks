@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { MapPin, Calendar } from "lucide-react";
 
 const areas = [
   "Centurion", "Wierdapark", "Eldoraigne", "Rooihuiskraal",
@@ -7,13 +8,12 @@ const areas = [
 ];
 
 const Areas = () => (
-  <section id="areas" className="py-20 px-4 bg-warm-bg">
+  <section id="areas" className="py-20 max-sm:py-12 px-4 bg-white">
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* Left */}
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <p className="section-label mb-3">SERVICE AREAS</p>
-          <h2 className="font-display font-black text-text-dark" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
+          <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Laundry Collection & Delivery Across All of Centurion
           </h2>
           <p className="mt-4 text-text-muted font-body leading-relaxed">
@@ -21,21 +21,20 @@ const Areas = () => (
           </p>
           <button
             onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}
-            className="mt-6 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg hover:-translate-y-[2px] transition-transform"
+            className="mt-6 inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg hover:-translate-y-[2px] transition-transform"
           >
-            📅 Check Your Area
+            <Calendar size={18} /> Check Your Area
           </button>
         </motion.div>
 
-        {/* Right */}
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="grid grid-cols-2 gap-3">
             {areas.map((area) => (
               <div
                 key={area}
-                className="bg-white border border-black/[0.07] rounded-[10px] px-[18px] py-[14px] font-body font-semibold text-[0.88rem] text-text-dark flex items-center gap-2 hover:border-blue-primary hover:text-blue-primary hover:translate-x-1 transition-all cursor-default"
+                className="bg-white border border-black/[0.08] rounded-[10px] px-[18px] py-[13px] font-body font-semibold text-[0.88rem] text-text-dark flex items-center gap-2 hover:border-blue-primary hover:text-blue-primary hover:translate-x-1 transition-all cursor-default"
               >
-                📍 {area}
+                <MapPin size={14} className="text-blue-primary flex-shrink-0" /> {area}
               </div>
             ))}
           </div>

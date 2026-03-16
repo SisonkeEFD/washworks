@@ -7,11 +7,11 @@ const Pricing = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="pricing" className="py-20 px-4 bg-warm-bg">
+    <section id="pricing" className="py-20 max-sm:py-12 px-4 bg-white">
       <div className="max-w-5xl mx-auto text-center">
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <p className="section-label mb-3">TRANSPARENT PRICING</p>
-          <h2 className="font-display font-black text-text-dark" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}>
+          <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Simple, Flat Rates. No Hidden Costs.
           </h2>
           <p className="mt-4 text-text-muted font-body max-w-2xl mx-auto">
@@ -19,7 +19,6 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        {/* Tabs */}
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           {tabs.map((tab, i) => (
             <button
@@ -28,7 +27,7 @@ const Pricing = () => {
               className={`font-body font-semibold text-[0.85rem] px-5 py-[10px] rounded-full border-[1.5px] transition-all ${
                 active === i
                   ? "bg-blue-primary text-white border-blue-primary"
-                  : "border-black/[0.12] text-text-dark hover:bg-blue-primary hover:text-white hover:border-blue-primary"
+                  : "border-black/[0.12] text-text-muted hover:bg-blue-ice hover:text-blue-primary"
               }`}
             >
               {tab}
@@ -36,14 +35,13 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Tab content */}
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             className="mt-8"
           >
             {active === 0 && <LaundryTable />}
@@ -58,13 +56,13 @@ const Pricing = () => {
 };
 
 const TableWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-white rounded-[20px] overflow-hidden shadow-sm overflow-x-auto">
-    <table className="w-full text-left">{children}</table>
+  <div className="bg-white rounded-[20px] overflow-hidden border border-black/[0.07] shadow-[0_4px_30px_rgba(0,0,0,0.05)] overflow-x-auto">
+    <table className="w-full text-left min-w-[500px]">{children}</table>
   </div>
 );
 
 const Th = ({ children }: { children: React.ReactNode }) => (
-  <th className="bg-navy-dark text-white uppercase text-[0.8rem] tracking-[1.5px] font-body font-bold px-6 py-4 text-center first:text-left">
+  <th className="bg-navy-dark text-white uppercase text-[0.8rem] tracking-[1.5px] font-body font-bold px-6 py-[18px] text-center first:text-left">
     {children}
   </th>
 );
@@ -88,15 +86,15 @@ const LaundryTable = () => (
           ["Medium", "R210", "R280"],
           ["Large", "R290", "R380"],
         ].map(([size, ev, prem]) => (
-          <tr key={size} className="border-t border-black/[0.06] hover:bg-[rgba(26,58,143,0.04)]">
+          <tr key={size} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
             <Td>{size}</Td><Td bold>{ev}</Td><Td bold>{prem}</Td>
           </tr>
         ))}
       </tbody>
     </TableWrapper>
     <div className="mt-4 bg-[rgba(26,58,143,0.06)] border border-[rgba(26,58,143,0.15)] rounded-[10px] p-[18px_24px] text-left">
-      <p className="font-body text-sm text-text-dark">
-        <strong>Not included in baskets:</strong> Bedding, towels & bathroom mats — R45–R50/kg · Blankets & duvets — item-based pricing · Heavy-duty items — quoted separately.
+      <p className="font-body text-[0.85rem] text-text-muted">
+        <strong className="text-text-dark">Not included in baskets:</strong> Bedding, towels & bathroom mats — R45–R50/kg · Blankets & duvets — item-based pricing · Heavy-duty items — quoted separately.
       </p>
     </div>
   </>
@@ -117,7 +115,7 @@ const SneakerTable = () => (
         ["Crocs Wash (Adults)", "R50"],
         ["Crocs Wash (Kids)", "R30"],
       ].map(([item, price]) => (
-        <tr key={item} className="border-t border-black/[0.06] hover:bg-[rgba(26,58,143,0.04)]">
+        <tr key={item} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
           <Td>{item}</Td><Td bold>{price}</Td>
         </tr>
       ))}
@@ -136,14 +134,14 @@ const CarpetTable = () => (
           ["Premium Carpet Wash", "R100/m²", "Wool, Oriental & delicate rugs"],
           ["Standard Rug Cleaning", "R50/m²", "Synthetic, machine-made & household rugs"],
         ].map(([srv, rate, best]) => (
-          <tr key={srv} className="border-t border-black/[0.06] hover:bg-[rgba(26,58,143,0.04)]">
+          <tr key={srv} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
             <Td>{srv}</Td><Td bold>{rate}</Td><Td>{best}</Td>
           </tr>
         ))}
       </tbody>
     </TableWrapper>
     <div className="mt-4 bg-[rgba(26,58,143,0.06)] border border-[rgba(26,58,143,0.15)] rounded-[10px] p-[18px_24px] text-left">
-      <p className="font-body text-sm text-text-muted">All carpet cleaning uses specialist washing machines for a deep, professional finish.</p>
+      <p className="font-body text-[0.85rem] text-text-muted">All carpet cleaning uses specialist washing machines for a deep, professional finish.</p>
     </div>
   </>
 );
@@ -160,7 +158,7 @@ const ExtrasTable = () => (
         ["Heavy-duty Items", "Quoted on request"],
         ["Monthly Family Packages", "Custom — contact us"],
       ].map(([item, rate]) => (
-        <tr key={item} className="border-t border-black/[0.06] hover:bg-[rgba(26,58,143,0.04)]">
+        <tr key={item} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
           <Td>{item}</Td><Td bold>{rate}</Td>
         </tr>
       ))}
