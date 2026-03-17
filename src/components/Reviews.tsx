@@ -7,11 +7,11 @@ const reviews = [
 ];
 
 const Reviews = () => (
-  <section id="reviews" className="py-20 max-sm:py-12 px-4 bg-blue-ice">
+  <section id="reviews" className="section-padding px-4 bg-blue-ice">
     <div className="max-w-6xl mx-auto text-center">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3">COMMUNITY TRUST</p>
-        <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+        <h2 className="font-display text-text-dark tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           What Centurion Customers Say
         </h2>
         <p className="mt-4 text-text-muted font-body max-w-xl mx-auto">

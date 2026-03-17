@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: 1, title: "Book Your Pickup", desc: "Schedule online or via WhatsApp. Choose your date, time slot, and basket size." },
+  { num: 1, title: "Book Your Pickup", desc: "Schedule online or via WhatsApp. Choose your date, time slot and basket size." },
   { num: 2, title: "We Collect in Centurion", desc: "We arrive at your door at your scheduled time and collect your laundry with care." },
   { num: 3, title: "Expert Cleaning", desc: "Your items are cleaned using quality detergents and hygienic processes. Every item treated with respect." },
-  { num: 4, title: "Delivered Fresh", desc: "We return your laundry clean, folded and fresh to your door — ready to use." },
+  { num: 4, title: "Delivered Fresh", desc: "We return your laundry clean, folded and fresh to your door, ready to use." },
 ];
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="py-20 max-sm:py-12 px-4 bg-navy-dark">
+  <section id="how-it-works" className="section-padding px-4 bg-navy-dark">
     <div className="max-w-6xl mx-auto text-center">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3 !text-blue-light">SIMPLE PROCESS</p>
-        <h2 className="font-display text-white tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+        <h2 className="font-display text-white tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           Fresh Laundry in 4 Easy Steps
         </h2>
         <p className="mt-4 text-white/50 font-body max-w-xl mx-auto">
@@ -21,9 +21,7 @@ const HowItWorks = () => (
       </motion.div>
 
       <div className="mt-16 relative grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Connector line — desktop only */}
         <div className="hidden md:block absolute top-[30px] left-[12.5%] right-[12.5%] h-0 border-t border-dashed border-[rgba(37,99,235,0.3)]" />
-
         {steps.map((step, i) => (
           <motion.div
             key={step.num}

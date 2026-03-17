@@ -8,20 +8,20 @@ const areas = [
 ];
 
 const Areas = () => (
-  <section id="areas" className="py-20 max-sm:py-12 px-4 bg-white">
+  <section id="areas" className="section-padding px-4 bg-white">
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <p className="section-label mb-3">SERVICE AREAS</p>
-          <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <h2 className="font-display text-text-dark tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Laundry Collection & Delivery Across All of Centurion
           </h2>
           <p className="mt-4 text-text-muted font-body leading-relaxed">
-            Whether you're in Wierdapark, Eldoraigne, Midstream or anywhere in greater Centurion — we come to you. Our laundry collection and delivery service covers the full Centurion area, making professional laundry genuinely convenient for your community. Not sure if we cover your street? Just WhatsApp us.
+            Whether you're in Wierdapark, Eldoraigne, Midstream or anywhere in greater Centurion, we come to you. Our laundry collection and delivery service covers the full Centurion area, making professional laundry genuinely convenient for your community. Not sure if we cover your street? Just WhatsApp us.
           </p>
           <button
             onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}
-            className="mt-6 inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg hover:-translate-y-[2px] transition-transform"
+            className="mt-6 inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-7 py-[14px] rounded-lg hover:bg-[#1d4ed8] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(37,99,235,0.35)] transition-all"
           >
             <Calendar size={18} /> Check Your Area
           </button>

@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top bar — desktop only */}
+      {/* Top bar - desktop only */}
       <div className="hidden md:flex fixed top-0 left-0 right-0 z-[1001] h-9 bg-blue-primary text-white items-center justify-center gap-4 font-body font-medium text-[0.78rem]">
         <a href="tel:+27796388572" className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
           <Phone size={12} /> 079 638 8572
@@ -41,30 +41,29 @@ const Navbar = () => {
         </a>
         <span className="text-white/40">·</span>
         <span className="inline-flex items-center gap-1.5">
-          <Clock size={12} /> Mon–Fri: 8am–6pm · Sat: 9am–2pm
+          <Clock size={12} /> Mon-Fri: 8am-6pm · Sat: 9am-2pm
         </span>
       </div>
 
       {/* Navbar */}
       <nav
-        className={`fixed left-0 right-0 z-[1000] h-[70px] flex items-center transition-all duration-300 ${
+        className={`fixed left-0 right-0 z-[1000] h-[70px] flex items-center transition-all duration-300 md:top-9 top-0 ${
           scrolled
             ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
             : "bg-[rgba(13,27,42,0.96)] backdrop-blur-[12px] border-b border-white/[0.08]"
         }`}
-        style={{ top: typeof window !== "undefined" && window.innerWidth >= 768 ? "36px" : "0px" }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <div className="w-full max-w-7xl mx-auto px-[5%] flex items-center justify-between">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0">
             <img
               src={scrolled ? logoBlue : logoWhite}
               alt="The Wash Works"
-              className="w-[130px] lg:w-[160px]"
+              className="h-14 max-lg:h-11 w-auto"
             />
           </button>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-8 ml-10">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -81,7 +80,7 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <button
             onClick={() => scrollTo("#booking")}
-            className="hidden lg:block bg-blue-bright text-white font-body font-bold text-sm px-[22px] py-[10px] rounded-lg hover:-translate-y-[1px] transition-transform"
+            className="hidden lg:block bg-blue-bright text-white font-body font-bold text-[0.85rem] px-[22px] py-[10px] rounded-lg hover:bg-[#1d4ed8] hover:-translate-y-[1px] transition-all"
           >
             Book a Pickup
           </button>
@@ -92,9 +91,9 @@ const Navbar = () => {
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? (
-              <X size={24} className={scrolled ? "text-navy-dark" : "text-white"} />
+              <X size={22} className={scrolled ? "text-navy-dark" : "text-white"} />
             ) : (
-              <Menu size={24} className={scrolled ? "text-navy-dark" : "text-white"} />
+              <Menu size={22} className={scrolled ? "text-navy-dark" : "text-white"} />
             )}
           </button>
         </div>

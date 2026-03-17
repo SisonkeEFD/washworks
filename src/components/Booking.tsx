@@ -88,13 +88,13 @@ const Booking = () => {
   return (
     <section
       id="booking"
-      className="py-20 max-sm:py-12 px-4"
+      className="section-padding px-4"
       style={{ background: "linear-gradient(135deg, #0D1B2A 0%, #0a2540 100%)" }}
     >
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }} className="text-center mb-12">
           <p className="section-label mb-3 !text-blue-light">BOOK A PICKUP</p>
-          <h2 className="font-display text-white tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <h2 className="font-display text-white tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Schedule Your Laundry Pickup in Centurion
           </h2>
           <p className="mt-4 text-white/[0.45] font-body max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ const Booking = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Left — Booking Widget */}
+          {/* Left - Booking Widget */}
           <div className="lg:col-span-3 bg-white/[0.05] backdrop-blur-[16px] border border-white/[0.1] rounded-[20px] p-8 sm:p-10">
             {/* Step indicator */}
             <div className="flex items-center justify-center gap-0 mb-10">
@@ -171,8 +171,8 @@ const Booking = () => {
                       </div>
                     </div>
                     {selectedDate && (
-                      <button onClick={() => setStep(2)} className="mt-6 bg-blue-bright text-white font-body font-bold px-6 py-3 rounded-lg w-full hover:-translate-y-[2px] transition-transform">
-                        Next →
+                      <button onClick={() => setStep(2)} className="mt-6 bg-blue-bright text-white font-body font-bold px-6 py-3 rounded-lg w-full hover:bg-[#1d4ed8] hover:-translate-y-[2px] transition-all">
+                        Next
                       </button>
                     )}
                   </div>
@@ -202,9 +202,9 @@ const Booking = () => {
                       <button
                         onClick={() => selectedTime && setStep(3)}
                         disabled={!selectedTime}
-                        className="bg-blue-bright text-white font-body font-bold px-6 py-3 rounded-lg flex-1 disabled:opacity-40 hover:-translate-y-[2px] transition-transform"
+                        className="bg-blue-bright text-white font-body font-bold px-6 py-3 rounded-lg flex-1 disabled:opacity-40 hover:bg-[#1d4ed8] hover:-translate-y-[2px] transition-all"
                       >
-                        Next →
+                        Next
                       </button>
                     </div>
                   </div>
@@ -262,7 +262,7 @@ const Booking = () => {
                     </div>
                     <div className="mt-6 flex gap-3">
                       <button onClick={() => setStep(2)} className="border border-white/20 text-white font-body font-bold px-6 py-3 rounded-lg">Back</button>
-                      <button onClick={handleSubmit} className="inline-flex items-center justify-center gap-2 bg-blue-bright text-white font-body font-bold py-4 rounded-lg flex-1 hover:-translate-y-[2px] transition-transform text-base">
+                      <button onClick={handleSubmit} className="inline-flex items-center justify-center gap-2 bg-blue-bright text-white font-body font-bold py-4 rounded-lg flex-1 hover:bg-[#1d4ed8] hover:-translate-y-[2px] transition-all text-base">
                         <CheckCircle size={18} /> Confirm My Pickup
                       </button>
                     </div>
@@ -272,13 +272,13 @@ const Booking = () => {
             )}
           </div>
 
-          {/* Right — Contact Info */}
+          {/* Right - Contact Info */}
           <div className="lg:col-span-2">
             <h3 className="font-display text-white text-[1.5rem] mb-8 tracking-[1px]">We Make it Easy to Get Started</h3>
 
             <div className="space-y-6">
               {[
-                { icon: Clock, title: "Operating Hours", desc: "Monday to Friday: 8am – 6pm | Saturday: 9am – 2pm | Sunday: Closed" },
+                { icon: Clock, title: "Operating Hours", desc: "Monday to Friday: 8am to 6pm | Saturday: 9am to 2pm | Sunday: Closed" },
                 { icon: MapPin, title: "Collection Area", desc: "Centurion and all surrounding suburbs including Wierdapark, Eldoraigne, Rooihuiskraal, Midstream, Highveld, Lyttelton and more." },
                 { icon: MessageCircle, title: "WhatsApp", desc: "Message us directly on 079 638 8572 to book or ask any questions." },
                 { icon: Mail, title: "Email", desc: "info@thewashworks.co.za" },

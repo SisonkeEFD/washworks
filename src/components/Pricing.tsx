@@ -7,11 +7,11 @@ const Pricing = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="pricing" className="py-20 max-sm:py-12 px-4 bg-white">
+    <section id="pricing" className="section-padding px-4 bg-white">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <p className="section-label mb-3">TRANSPARENT PRICING</p>
-          <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <h2 className="font-display text-text-dark tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Simple, Flat Rates. No Hidden Costs.
           </h2>
           <p className="mt-4 text-text-muted font-body max-w-2xl mx-auto">
@@ -94,7 +94,7 @@ const LaundryTable = () => (
     </TableWrapper>
     <div className="mt-4 bg-[rgba(26,58,143,0.06)] border border-[rgba(26,58,143,0.15)] rounded-[10px] p-[18px_24px] text-left">
       <p className="font-body text-[0.85rem] text-text-muted">
-        <strong className="text-text-dark">Not included in baskets:</strong> Bedding, towels & bathroom mats — R45–R50/kg · Blankets & duvets — item-based pricing · Heavy-duty items — quoted separately.
+        <strong className="text-text-dark">Not included in baskets:</strong> Bedding, towels and bathroom mats: R45-R50/kg · Blankets and duvets: item-based pricing · Heavy-duty items: quoted separately.
       </p>
     </div>
   </>
@@ -131,8 +131,8 @@ const CarpetTable = () => (
       </thead>
       <tbody>
         {[
-          ["Premium Carpet Wash", "R100/m²", "Wool, Oriental & delicate rugs"],
-          ["Standard Rug Cleaning", "R50/m²", "Synthetic, machine-made & household rugs"],
+          ["Premium Carpet Wash", "R100/m\u00B2", "Wool, Oriental & delicate rugs"],
+          ["Standard Rug Cleaning", "R50/m\u00B2", "Synthetic, machine-made & household rugs"],
         ].map(([srv, rate, best]) => (
           <tr key={srv} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
             <Td>{srv}</Td><Td bold>{rate}</Td><Td>{best}</Td>
@@ -153,10 +153,10 @@ const ExtrasTable = () => (
     </thead>
     <tbody>
       {[
-        ["Bedding, Towels & Bath Mats", "R45–R50/kg"],
+        ["Bedding, Towels & Bath Mats", "R45-R50/kg"],
         ["Blankets & Duvets", "Item-based pricing"],
         ["Heavy-duty Items", "Quoted on request"],
-        ["Monthly Family Packages", "Custom — contact us"],
+        ["Monthly Family Packages", "Custom, contact us"],
       ].map(([item, rate]) => (
         <tr key={item} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
           <Td>{item}</Td><Td bold>{rate}</Td>
