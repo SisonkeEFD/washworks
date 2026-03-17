@@ -69,11 +69,11 @@ const BeforeAfterSlider = ({ before, after, caption }: { before: string; after: 
 };
 
 const Gallery = () => (
-  <section id="gallery" className="py-20 max-sm:py-12 px-4 bg-blue-ice">
+  <section id="gallery" className="section-padding px-4 bg-blue-ice">
     <div className="max-w-7xl mx-auto text-center">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3">THE RESULTS</p>
-        <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+        <h2 className="font-display text-text-dark tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           The Results Speak for Themselves
         </h2>
         <p className="mt-4 text-text-muted font-body max-w-xl mx-auto">
@@ -98,7 +98,7 @@ const Gallery = () => (
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12">
         <button
           onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}
-          className="inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:-translate-y-[2px] transition-all"
+          className="inline-flex items-center gap-2 bg-blue-bright text-white font-body font-bold px-8 py-4 rounded-lg shadow-[0_8px_30px_rgba(37,99,235,0.4)] hover:bg-[#1d4ed8] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(37,99,235,0.35)] transition-all"
         >
           <Calendar size={18} /> Book Your Transformation Today
         </button>

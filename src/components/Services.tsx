@@ -2,24 +2,24 @@ import { motion } from "framer-motion";
 import { Shirt, Waves, Footprints, Home, Truck, Building2, ArrowRight } from "lucide-react";
 
 const services = [
-  { icon: Shirt, title: "Wash, Dry & Ironing in Centurion", desc: "Your everyday laundry done properly. We wash, dry and iron your clothing using quality detergents — returned clean, pressed, and ready to wear. Perfect for busy households across Centurion.", price: "From R120 per basket", cta: "Book a Wash & Iron Pickup" },
-  { icon: Waves, title: "Wash & Dry in Centurion", desc: "Our everyday care basket — washed and dried to a fresh finish. No ironing, just clean, fresh clothing ready for folding. Great value for regular household laundry.", price: "From R80 per basket", cta: "Book a Wash & Dry Pickup" },
-  { icon: Footprints, title: "Sneaker Cleaning in Centurion", desc: "Specialist cleaning for takkies, leather shoes, Crocs, and leather bags. Kids and adult sizes handled with care. Heavily soiled shoes welcome — we've seen worse.", price: "From R50 per pair", cta: "Book Sneaker Cleaning" },
-  { icon: Home, title: "Carpet Cleaning in Centurion", desc: "Professional deep-clean using specialist carpet washing machines. Standard household rugs to premium wool, Oriental and delicate floor coverings — all treated with expert care.", price: "From R50 per m²", cta: "Book Carpet Cleaning" },
-  { icon: Truck, title: "Laundry Collection & Delivery Centurion", desc: "Too busy to drop off? We come to you. Schedule a collection, we clean everything properly, and return it fresh directly to your door. Centurion-wide service.", price: "Flexible scheduling", cta: "Schedule a Pickup" },
-  { icon: Building2, title: "Corporate & Monthly Packages", desc: "Tailored laundry solutions for offices, guest houses, clinics, and families. Discounted rates, scheduled pickups, and a professional service your team or guests will appreciate.", price: "Custom pricing", cta: "Get a Custom Quote" },
+  { icon: Shirt, title: "Wash, Dry & Ironing in Centurion", desc: "Your everyday laundry done properly. We wash, dry and iron your clothing using quality detergents, returning everything clean, pressed and ready to wear. Perfect for busy households across Centurion.", price: "From R120 per basket", cta: "Book a Wash & Iron Pickup" },
+  { icon: Waves, title: "Wash & Dry in Centurion", desc: "Our everyday care basket, washed and dried to a fresh finish. No ironing, just clean, fresh clothing ready for folding. Great value for regular household laundry.", price: "From R80 per basket", cta: "Book a Wash & Dry Pickup" },
+  { icon: Footprints, title: "Sneaker Cleaning in Centurion", desc: "Specialist cleaning for takkies, leather shoes, Crocs and leather bags. We handle kids and adult sizes with care. Heavily soiled shoes are welcome.", price: "From R50 per pair", cta: "Book Sneaker Cleaning" },
+  { icon: Home, title: "Carpet Cleaning in Centurion", desc: "Professional deep-clean using specialist carpet washing machines. From standard household rugs to premium wool, Oriental and delicate floor coverings, all treated with expert care.", price: "From R50 per m\u00B2", cta: "Book Carpet Cleaning" },
+  { icon: Truck, title: "Laundry Collection & Delivery Centurion", desc: "Too busy to drop off? We come to you. Schedule a collection, we clean everything thoroughly, and return it fresh directly to your door. Centurion-wide service available.", price: "Flexible scheduling", cta: "Schedule a Pickup" },
+  { icon: Building2, title: "Corporate & Monthly Packages", desc: "Tailored laundry solutions for offices, guest houses, clinics and families. Discounted rates, scheduled pickups and a professional service your team or guests will appreciate.", price: "Custom pricing", cta: "Get a Custom Quote" },
 ];
 
 const Services = () => (
-  <section id="services" className="py-20 max-sm:py-12 px-4 bg-blue-ice">
+  <section id="services" className="section-padding px-4 bg-blue-ice">
     <div className="max-w-7xl mx-auto text-center">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
         <p className="section-label mb-3">WHAT WE DO</p>
-        <h2 className="font-display text-text-dark tracking-[1.5px]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+        <h2 className="font-display text-text-dark tracking-[1.5px] leading-[1.05]" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
           Every Clean You'll Ever Need, Right Here in Centurion
         </h2>
         <p className="mt-4 text-text-muted font-body max-w-2xl mx-auto">
-          From everyday laundry to specialist cleaning — we handle it all with care, consistency, and a smile. Pickup and delivery available across Centurion and surrounding suburbs.
+          From everyday laundry to specialist cleaning, we handle it all with care, consistency and a smile. Pickup and delivery available across Centurion and surrounding suburbs.
         </p>
       </motion.div>
 
