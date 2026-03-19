@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
         {/* Brand */}
         <div>
-          <img src={logoWhite} alt="The Wash Works" className="w-[140px] mb-4" />
+          <img src={logoWhite} alt="The Wash Works" className="w-[100px] mb-4" />
           <p className="font-body text-white/60 text-base">The future of laundry is effortless.</p>
           <p className="font-body text-[0.82rem] text-white/40 mt-3 leading-relaxed">
             Professional laundromat in Centurion offering wash and fold, ironing, sneaker cleaning, carpet cleaning and convenient collection and delivery.
