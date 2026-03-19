@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Calendar, MessageCircle, CheckCircle2, ChevronDown } from "lucide-react";
+import heroBg from "@/assets/Hero_Background_Image.jpg";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 30 },
@@ -34,25 +35,17 @@ const Hero = () => {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        background: `
-          radial-gradient(ellipse 70% 70% at 80% 50%, rgba(26,58,143,0.25) 0%, transparent 60%),
-          radial-gradient(ellipse 50% 80% at 10% 80%, rgba(37,99,235,0.1) 0%, transparent 50%),
-          hsl(var(--navy-dark))
-        `,
-      }}
+      style={{ backgroundColor: "#0D1B2A" }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[rgba(13,27,42,0.62)]" />
-
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
+      {/* Layer 0 — Background image */}
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
       />
+
+      {/* Layer 1 — Dark overlay */}
+      <div className="absolute inset-0 bg-[rgba(13,27,42,0.65)] z-[1]" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] pt-32 pb-20 flex items-center">
         {/* Left content */}
