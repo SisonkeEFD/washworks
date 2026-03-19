@@ -58,7 +58,7 @@ const Navbar = () => {
             <img
               src={scrolled ? logoBlue : logoWhite}
               alt="The Wash Works"
-              className="h-14 max-lg:h-11 w-auto"
+              className={`w-auto max-lg:h-11 ${scrolled ? "h-[52px]" : "h-14"} transition-all duration-300`}
             />
           </button>
 
