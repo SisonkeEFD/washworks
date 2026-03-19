@@ -12,6 +12,8 @@ import carpetBefore from "@/assets/Carpet_Cleaning_Centurion_1.jpg";
 import carpetAfter from "@/assets/Carpet_Cleaning_Centurion_2.jpg";
 import washBefore from "@/assets/Wash_Dry_Fold_1.jpg";
 import washAfter from "@/assets/Wash_Dry_Fold_2.jpg";
+import duvetBefore from "@/assets/Duvet_Blanket_Wash_1.jpg";
+import duvetAfter from "@/assets/Duvet_Blanket_Wash_2.jpg";
 
 const galleryItems = [
   { before: sneakerBefore, after: sneakerAfter, caption: "Sneaker Cleaning in Centurion", cta: "Book Sneaker Cleaning" },
@@ -19,7 +21,7 @@ const galleryItems = [
   { before: kidsBefore, after: kidsAfter, caption: "Kids Sneaker Wash", cta: "Book Kids Sneaker Wash" },
   { before: carpetBefore, after: carpetAfter, caption: "Carpet Cleaning Centurion", cta: "Book Carpet Cleaning" },
   { before: washBefore, after: washAfter, caption: "Wash, Dry & Fold", cta: "Book a Laundry Pickup" },
-  { before: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=600&q=80", after: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80", caption: "Duvet & Blanket Wash", cta: "Book Duvet Cleaning" },
+  { before: duvetBefore, after: duvetAfter, caption: "Duvet & Blanket Wash", cta: "Book Duvet Cleaning" },
 ];
 
 const BeforeAfterSlider = ({ before, after, caption, cta }: { before: string; after: string; caption: string; cta: string }) => {
