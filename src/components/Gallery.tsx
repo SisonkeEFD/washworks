@@ -6,13 +6,19 @@ import sneakerBefore from "@/assets/Sneaker_Cleaning_in_Centurion_1.jpg";
 import sneakerAfter from "@/assets/Sneaker_Cleaning_in_Centurion_2.jpg";
 import leatherBefore from "@/assets/Leather_Shoe_Treatment_1.jpg";
 import leatherAfter from "@/assets/Leather_Shoe_Treatment_2.jpg";
+import kidsBefore from "@/assets/Kids_Sneaker_Wash_1.jpg";
+import kidsAfter from "@/assets/Kids_Sneaker_Wash_2.jpg";
+import carpetBefore from "@/assets/Carpet_Cleaning_Centurion_1.jpg";
+import carpetAfter from "@/assets/Carpet_Cleaning_Centurion_2.jpg";
+import washBefore from "@/assets/Wash_Dry_Fold_1.jpg";
+import washAfter from "@/assets/Wash_Dry_Fold_2.jpg";
 
 const galleryItems = [
   { before: sneakerBefore, after: sneakerAfter, caption: "Sneaker Cleaning in Centurion", cta: "Book Sneaker Cleaning" },
   { before: leatherBefore, after: leatherAfter, caption: "Leather Shoe Treatment", cta: "Book Leather Shoe Treatment" },
-  { before: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80", after: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80", caption: "Kids Sneaker Wash", cta: "Book Kids Sneaker Wash" },
-  { before: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80", after: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80", caption: "Carpet Cleaning Centurion", cta: "Book Carpet Cleaning" },
-  { before: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80", after: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=600&q=80", caption: "Wash, Dry & Fold", cta: "Book a Laundry Pickup" },
+  { before: kidsBefore, after: kidsAfter, caption: "Kids Sneaker Wash", cta: "Book Kids Sneaker Wash" },
+  { before: carpetBefore, after: carpetAfter, caption: "Carpet Cleaning Centurion", cta: "Book Carpet Cleaning" },
+  { before: washBefore, after: washAfter, caption: "Wash, Dry & Fold", cta: "Book a Laundry Pickup" },
   { before: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=600&q=80", after: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80", caption: "Duvet & Blanket Wash", cta: "Book Duvet Cleaning" },
 ];
 
@@ -37,7 +43,7 @@ const BeforeAfterSlider = ({ before, after, caption, cta }: { before: string; af
     <div className="group">
       <div
         ref={containerRef}
-        className="relative w-full aspect-[4/3] sm:aspect-[4/3] max-sm:aspect-[3/4] rounded-[16px] overflow-hidden cursor-col-resize select-none"
+        className="relative w-full aspect-[4/3] max-sm:aspect-[3/4] rounded-[16px] overflow-hidden cursor-col-resize select-none"
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
@@ -46,22 +52,15 @@ const BeforeAfterSlider = ({ before, after, caption, cta }: { before: string; af
         onTouchStart={onMouseDown}
         onTouchEnd={onMouseUp}
       >
-        {/* After image (full, behind) */}
         <img src={after} alt="After" className="absolute inset-0 w-full h-full object-cover object-center" />
-
-        {/* Before image (clipped from left) */}
         <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
           <img src={before} alt="Before" className="w-full h-full object-cover object-center" />
         </div>
 
-        {/* Labels - z-20 so always visible */}
         <span className="absolute top-3 left-3 z-20 bg-black/55 text-white text-[0.68rem] font-bold uppercase px-[10px] py-1 rounded font-body">Before</span>
         <span className="absolute top-3 right-3 z-20 bg-black/55 text-white text-[0.68rem] font-bold uppercase px-[10px] py-1 rounded font-body">After</span>
 
-        {/* Divider line */}
         <div className="absolute top-0 bottom-0 w-[2px] bg-white/80 z-10" style={{ left: `${pos}%` }} />
-
-        {/* Drag handle */}
         <div
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[44px] h-[44px] bg-white rounded-full flex items-center justify-center z-10"
           style={{ left: `${pos}%`, boxShadow: "0 2px 12px rgba(0,0,0,0.2)" }}
