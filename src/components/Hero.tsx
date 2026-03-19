@@ -47,7 +47,7 @@ const Hero = () => {
       {/* Layer 1 — Dark overlay */}
       <div className="absolute inset-0 bg-[rgba(13,27,42,0.65)] z-[1]" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] pt-32 pb-20 flex items-center">
+      <div className="relative z-[2] w-full max-w-7xl mx-auto px-[5%] pt-32 pb-20 flex items-center">
         {/* Left content */}
         <div className="max-w-[700px] max-lg:mx-auto max-lg:text-center">
           <motion.div {...fadeUp(0.1)}>
