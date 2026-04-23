@@ -72,7 +72,7 @@ const Hero = () => {
             {...fadeUp(0.3)}
             className="mt-6 text-white/[0.65] text-[1.05rem] leading-[1.7] max-w-[560px] font-body max-lg:mx-auto"
           >
-            Professional wash and fold, ironing, sneaker cleaning and carpet cleaning, with convenient collection and delivery throughout Centurion, Wierdapark, Eldoraigne, Rooihuiskraal, Midstream and surrounding areas.
+            Professional wash and fold, ironing, sneaker cleaning and carpet cleaning, with convenient collection and delivery throughout Centurion, Riversands, Raslouw, Copperleaf, Eldoraigne and surrounding areas.
           </motion.p>
 
           <motion.div {...fadeUp(0.4)} className="mt-8 flex flex-wrap gap-4 max-lg:justify-center max-sm:flex-col">

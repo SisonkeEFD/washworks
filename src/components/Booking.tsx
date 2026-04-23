@@ -279,9 +279,9 @@ const Booking = () => {
             <div className="space-y-6">
               {[
                 { icon: Clock, title: "Operating Hours", desc: "Monday to Friday: 8am to 6pm | Saturday: 9am to 2pm | Sunday: Closed" },
-                { icon: MapPin, title: "Collection Area", desc: "Centurion and all surrounding suburbs including Wierdapark, Eldoraigne, Rooihuiskraal, Midstream, Highveld, Lyttelton and more." },
+                { icon: MapPin, title: "Collection Area", desc: "Centurion and surrounding suburbs including Riversands, Riverside View, Raslouw, Laudium, Christoburg, Laezonia, Doornrandje, Copperleaf and Eldoraigne." },
                 { icon: MessageCircle, title: "WhatsApp", desc: "Message us directly on 079 638 8572 to book or ask any questions." },
-                { icon: Mail, title: "Email", desc: "info@thewashworks.co.za" },
+                { icon: Mail, title: "Email", desc: "thewashworkslaundry@gmail.com" },
               ].map((item) => {
                 const Icon = item.icon;
                 return (

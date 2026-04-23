@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
 
 const areas = [
-  "Centurion", "Wierdapark", "Eldoraigne", "Rooihuiskraal",
-  "Highveld", "Midstream", "Lyttelton", "Wierda Valley",
-  "Centurion CBD", "The Reeds", "Doringkloof", "Irene",
+  "Centurion", "Riversands", "Riverside View", "Raslouw",
+  "Laudium", "Christoburg", "Laezonia", "Doornrandje",
+  "Copperleaf", "Eldoraigne", "Rooihuiskraal", "The Reeds",
 ];
 
 const Areas = () => (
@@ -17,7 +17,7 @@ const Areas = () => (
             Laundry Collection & Delivery Across All of Centurion
           </h2>
           <p className="mt-4 text-text-muted font-body leading-relaxed">
-            Whether you're in Wierdapark, Eldoraigne, Midstream or anywhere in greater Centurion, we come to you. Our laundry collection and delivery service covers the full Centurion area, making professional laundry genuinely convenient for your community. Not sure if we cover your street? Just WhatsApp us.
+            Whether you're in Riversands, Raslouw, Copperleaf, Eldoraigne or anywhere nearby, we come to you. Our laundry collection and delivery service covers Centurion and all surrounding suburbs, making professional laundry genuinely convenient for your community. Not sure if we cover your street? Just WhatsApp us.
           </p>
           <button
             onClick={() => document.querySelector("#booking")?.scrollIntoView({ behavior: "smooth" })}

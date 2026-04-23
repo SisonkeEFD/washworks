@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
-  { q: "Do you offer laundry collection and delivery in Centurion?", a: "Yes! We serve Centurion and all surrounding suburbs including Wierdapark, Eldoraigne, Rooihuiskraal, Midstream, Highveld, Lyttelton and more. Simply book a pickup and we'll come to you." },
+  { q: "Do you offer laundry collection and delivery in Centurion?", a: "Yes! We serve Centurion and all surrounding suburbs including Riversands, Riverside View, Raslouw, Laudium, Christoburg, Laezonia, Doornrandje, Copperleaf and Eldoraigne. Simply book a pickup and we'll come to you." },
   { q: "How long does laundry take from pickup to delivery?", a: "Most standard laundry orders are turned around within 24 to 48 hours. We'll confirm your delivery window when we collect. For urgent requests, WhatsApp us directly." },
   { q: "Do you clean white sneakers and delicate shoes?", a: "Absolutely. We clean all types of sneakers including white takkies, leather shoes, Crocs and leather bags using specialist products. Heavily soiled shoes carry a small R20 additional charge." },
-  { q: "What areas in Centurion do you service?", a: "The full greater Centurion area: Wierdapark, Eldoraigne, Rooihuiskraal, Highveld, Midstream, Lyttelton, Wierda Valley, The Reeds, Doringkloof, Irene, Gerhardsville and surrounding areas." },
+  { q: "What areas in Centurion do you service?", a: "Centurion plus the surrounding suburbs we're closest to: Riversands, Riverside View, Raslouw, Laudium, Christoburg, Laezonia, Doornrandje, Copperleaf, Eldoraigne, The Reeds, Gerhardsville and surrounding areas." },
   { q: "Do you offer same-day laundry service in Centurion?", a: "Same-day is subject to availability and order volume. Please WhatsApp us on 079 638 8572 to check if same-day is available on your preferred date." },
   { q: "Are your detergents safe for sensitive skin?", a: "We use quality, trusted detergents. If you have specific sensitivities or allergies, please note this in your booking and we'll accommodate accordingly." },
   { q: "Can I set up a monthly family laundry package?", a: "Yes! Our monthly family packages include scheduled weekly pickups and deliveries tailored to your household size. Contact us to build a custom plan that fits your routine and budget." },
