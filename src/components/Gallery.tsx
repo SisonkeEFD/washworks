@@ -54,9 +54,9 @@ const BeforeAfterSlider = ({ before, after, caption, cta }: { before: string; af
         onTouchStart={onMouseDown}
         onTouchEnd={onMouseUp}
       >
-        <img src={after} alt="After" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src={after} alt="After" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-          <img src={before} alt="Before" className="w-full h-full object-cover object-center" />
+          <img src={before} alt="Before" loading="lazy" decoding="async" className="w-full h-full object-cover object-center" />
         </div>
 
         <span className="absolute top-3 left-3 z-20 bg-black/55 text-white text-[0.68rem] font-bold uppercase px-[10px] py-1 rounded font-body">Before</span>
