@@ -67,8 +67,19 @@ const Booking = () => {
     if (!form.address) errs.address = true;
     if (Object.keys(errs).length) { setErrors(errs); return; }
 
-    const msg = `Hi! I'd like to confirm my laundry pickup booking. Name: ${form.name} | Date: ${selectedDate ? formatDate(selectedDate) : ""} | Time: ${selectedTime} | Address: ${form.address} | Service: ${form.service} | Basket: ${form.basket} | Notes: ${form.notes}`;
+    const dateStr = selectedDate ? formatDate(selectedDate) : "";
+    const msg = `Hi! I'd like to confirm my laundry pickup booking. Name: ${form.name} | Date: ${dateStr} | Time: ${selectedTime} | Address: ${form.address} | Service: ${form.service} | Basket: ${form.basket} | Notes: ${form.notes}`;
+
+    // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/27796388572?text=${encodeURIComponent(msg)}`, "_blank");
+
+    // Also send confirmation email to The Wash Works
+    const emailSubject = `New Pickup Booking — ${form.name} (${dateStr} ${selectedTime})`;
+    const emailBody = `New laundry pickup booking request:\n\nName: ${form.name}\nWhatsApp: ${form.phone}\nPickup Date: ${dateStr}\nPickup Time: ${selectedTime}\nCollection Address: ${form.address}\nService: ${form.service || "Not specified"}\nBasket Size: ${form.basket || "Not specified"}\nSpecial Instructions: ${form.notes || "None"}\n\n— Sent from thewashworks.co.za booking form`;
+    setTimeout(() => {
+      window.location.href = `mailto:thewashworkslaundry@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    }, 400);
+
     setSubmitted(true);
   };
 
