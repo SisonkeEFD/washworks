@@ -36,8 +36,8 @@ const Navbar = () => {
           <Phone size={12} /> 079 638 8572
         </a>
         <span className="text-white/40">·</span>
-        <a href="mailto:info@thewashworks.co.za" className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-          <Mail size={12} /> info@thewashworks.co.za
+        <a href="mailto:thewashworkslaundry@gmail.com" className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+          <Mail size={12} /> thewashworkslaundry@gmail.com
         </a>
         <span className="text-white/40">·</span>
         <span className="inline-flex items-center gap-1.5">
