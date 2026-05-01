@@ -18,8 +18,23 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll);
+    let ticking = false;
+    let lastScrolled = false;
+    const update = () => {
+      const next = window.scrollY > 80;
+      if (next !== lastScrolled) {
+        lastScrolled = next;
+        setScrolled(next);
+      }
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
