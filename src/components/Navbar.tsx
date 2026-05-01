@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, Clock, Menu, X } from "lucide-react";
-import logoWhite from "@/assets/TWWL-06.webp";
+import logoWhite from "@/assets/TWWL-06.png";
 import logoBlue from "@/assets/TWWL-01.png";
 
 const navLinks = [
