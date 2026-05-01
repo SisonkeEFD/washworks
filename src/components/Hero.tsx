@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Calendar, MessageCircle, CheckCircle2, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/Hero_Background_Image.jpg";
+import heroBg from "@/assets/Hero_Background_Image.webp";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 30 },

@@ -2,18 +2,18 @@ import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeftRight, ArrowRight, Calendar } from "lucide-react";
 
-import sneakerBefore from "@/assets/Sneaker_Cleaning_in_Centurion_1.jpg";
-import sneakerAfter from "@/assets/Sneaker_Cleaning_in_Centurion_2.jpg";
-import leatherBefore from "@/assets/Leather_Shoe_Treatment_1.jpg";
-import leatherAfter from "@/assets/Leather_Shoe_Treatment_2.jpg";
-import kidsBefore from "@/assets/Kids_Sneaker_Wash_1.jpg";
-import kidsAfter from "@/assets/Kids_Sneaker_Wash_2.jpg";
-import carpetBefore from "@/assets/Carpet_Cleaning_Centurion_1.jpg";
-import carpetAfter from "@/assets/Carpet_Cleaning_Centurion_2.jpg";
-import washBefore from "@/assets/Wash_Dry_Fold_1.jpg";
-import washAfter from "@/assets/Wash_Dry_Fold_2.jpg";
-import duvetBefore from "@/assets/Duvet_Blanket_Wash_1.jpg";
-import duvetAfter from "@/assets/Duvet_Blanket_Wash_2.jpg";
+import sneakerBefore from "@/assets/Sneaker_Cleaning_in_Centurion_1.webp";
+import sneakerAfter from "@/assets/Sneaker_Cleaning_in_Centurion_2.webp";
+import leatherBefore from "@/assets/Leather_Shoe_Treatment_1.webp";
+import leatherAfter from "@/assets/Leather_Shoe_Treatment_2.webp";
+import kidsBefore from "@/assets/Kids_Sneaker_Wash_1.webp";
+import kidsAfter from "@/assets/Kids_Sneaker_Wash_2.webp";
+import carpetBefore from "@/assets/Carpet_Cleaning_Centurion_1.webp";
+import carpetAfter from "@/assets/Carpet_Cleaning_Centurion_2.webp";
+import washBefore from "@/assets/Wash_Dry_Fold_1.webp";
+import washAfter from "@/assets/Wash_Dry_Fold_2.webp";
+import duvetBefore from "@/assets/Duvet_Blanket_Wash_1.webp";
+import duvetAfter from "@/assets/Duvet_Blanket_Wash_2.webp";
 
 const galleryItems = [
   { before: sneakerBefore, after: sneakerAfter, caption: "Sneaker Cleaning in Centurion", cta: "Book Sneaker Cleaning" },

@@ -1,5 +1,5 @@
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
-import logoWhite from "@/assets/TWWL-06.png";
+import logoWhite from "@/assets/TWWL-06.webp";
 
 const Footer = () => (
   <footer className="bg-navy-deep pt-16 pb-8 max-sm:pb-28 px-4">
