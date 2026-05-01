@@ -1,17 +1,20 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TickerStrip from "@/components/TickerStrip";
 import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
-import HowItWorks from "@/components/HowItWorks";
-import Gallery from "@/components/Gallery";
-import Areas from "@/components/Areas";
-import Reviews from "@/components/Reviews";
-import Booking from "@/components/Booking";
-import Corporate from "@/components/Corporate";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+
+// Defer below-the-fold sections to reduce initial JS payload
+const Pricing = lazy(() => import("@/components/Pricing"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Gallery = lazy(() => import("@/components/Gallery"));
+const Areas = lazy(() => import("@/components/Areas"));
+const Reviews = lazy(() => import("@/components/Reviews"));
+const Booking = lazy(() => import("@/components/Booking"));
+const Corporate = lazy(() => import("@/components/Corporate"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Footer = lazy(() => import("@/components/Footer"));
+const FloatingButtons = lazy(() => import("@/components/FloatingButtons"));
 
 const Index = () => {
   return (
@@ -20,16 +23,18 @@ const Index = () => {
       <Hero />
       <TickerStrip />
       <Services />
-      <Pricing />
-      <HowItWorks />
-      <Gallery />
-      <Areas />
-      <Reviews />
-      <Booking />
-      <Corporate />
-      <FAQ />
-      <Footer />
-      <FloatingButtons />
+      <Suspense fallback={null}>
+        <Pricing />
+        <HowItWorks />
+        <Gallery />
+        <Areas />
+        <Reviews />
+        <Booking />
+        <Corporate />
+        <FAQ />
+        <Footer />
+        <FloatingButtons />
+      </Suspense>
     </div>
   );
 };
