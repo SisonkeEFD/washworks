@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Shirt, Waves, Footprints, Home, Truck, Building2, ArrowRight } from "lucide-react";
+import { Shirt, Waves, Footprints, Truck, Building2, ArrowRight } from "lucide-react";
 
 const services = [
   { icon: Shirt, title: "Wash, Dry & Ironing in Centurion", desc: "Your everyday laundry done properly. We wash, dry and iron your clothing using quality detergents, returning everything clean, pressed and ready to wear. Perfect for busy households across Centurion.", price: "From R120 per basket", cta: "Book a Wash & Iron Pickup" },
   { icon: Waves, title: "Wash & Dry in Centurion", desc: "Our everyday care basket, washed and dried to a fresh finish. No ironing, just clean, fresh clothing ready for folding. Great value for regular household laundry.", price: "From R80 per basket", cta: "Book a Wash & Dry Pickup" },
   { icon: Footprints, title: "Sneaker Cleaning in Centurion", desc: "Specialist cleaning for takkies, leather shoes, Crocs and leather bags. We handle kids and adult sizes with care. Heavily soiled shoes are welcome.", price: "From R50 per pair", cta: "Book Sneaker Cleaning" },
-  { icon: Home, title: "Carpet Cleaning in Centurion", desc: "Professional deep-clean using specialist carpet washing machines. From standard household rugs to premium wool, Oriental and delicate floor coverings, all treated with expert care.", price: "From R50 per m\u00B2", cta: "Book Carpet Cleaning" },
   { icon: Truck, title: "Laundry Collection & Delivery Centurion", desc: "Too busy to drop off? We come to you. Schedule a collection, we clean everything thoroughly, and return it fresh directly to your door. Centurion-wide service available.", price: "Flexible scheduling", cta: "Schedule a Pickup" },
   { icon: Building2, title: "Corporate & Monthly Packages", desc: "Tailored laundry solutions for offices, guest houses, clinics and families. Discounted rates, scheduled pickups and a professional service your team or guests will appreciate.", price: "Custom pricing", cta: "Get a Custom Quote" },
 ];

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const tabs = ["Laundry Baskets", "Sneaker & Shoe Care", "Carpet Cleaning", "Extras"];
+const tabs = ["Laundry Baskets", "Sneaker & Shoe Care", "Extras"];
 
 const Pricing = () => {
   const [active, setActive] = useState(0);
@@ -46,8 +46,7 @@ const Pricing = () => {
           >
             {active === 0 && <LaundryTable />}
             {active === 1 && <SneakerTable />}
-            {active === 2 && <CarpetTable />}
-            {active === 3 && <ExtrasTable />}
+            {active === 2 && <ExtrasTable />}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -123,28 +122,6 @@ const SneakerTable = () => (
   </TableWrapper>
 );
 
-const CarpetTable = () => (
-  <>
-    <TableWrapper>
-      <thead>
-        <tr><Th>Service</Th><Th>Rate</Th><Th>Best For</Th></tr>
-      </thead>
-      <tbody>
-        {[
-          ["Premium Carpet Wash", "R100/m\u00B2", "Wool, Oriental & delicate rugs"],
-          ["Standard Rug Cleaning", "R50/m\u00B2", "Synthetic, machine-made & household rugs"],
-        ].map(([srv, rate, best]) => (
-          <tr key={srv} className="border-b border-black/[0.05] hover:bg-[rgba(26,58,143,0.04)]">
-            <Td>{srv}</Td><Td bold>{rate}</Td><Td>{best}</Td>
-          </tr>
-        ))}
-      </tbody>
-    </TableWrapper>
-    <div className="mt-4 bg-[rgba(26,58,143,0.06)] border border-[rgba(26,58,143,0.15)] rounded-[10px] p-[18px_24px] text-left">
-      <p className="font-body text-[0.85rem] text-text-muted">All carpet cleaning uses specialist washing machines for a deep, professional finish.</p>
-    </div>
-  </>
-);
 
 const ExtrasTable = () => (
   <TableWrapper>

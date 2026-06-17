@@ -10,14 +10,14 @@ const Footer = () => (
           <img src={logoWhite} alt="The Wash Works" className="w-[100px] mb-4" />
           <p className="font-body text-white/60 text-base">The future of laundry is effortless.</p>
           <p className="font-body text-[0.82rem] text-white/40 mt-3 leading-relaxed">
-            Professional laundromat in Centurion offering wash and fold, ironing, sneaker cleaning, carpet cleaning and convenient collection and delivery.
+            Professional laundromat in Centurion offering wash and fold, ironing, sneaker cleaning and convenient collection and delivery.
           </p>
         </div>
 
         {/* Services */}
         <div>
           <h4 className="font-body font-bold text-[0.75rem] tracking-[2px] uppercase text-white/60 mb-[18px]">SERVICES</h4>
-          {["Laundry Wash & Dry", "Wash, Dry & Ironing", "Sneaker Cleaning", "Carpet Cleaning", "Corporate Laundry", "Monthly Packages"].map((s) => (
+          {["Laundry Wash & Dry", "Wash, Dry & Ironing", "Sneaker Cleaning", "Corporate Laundry", "Monthly Packages"].map((s) => (
             <button key={s} onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="block font-body text-[0.83rem] text-white/40 hover:text-blue-light mb-[10px] transition-colors">
               {s}
             </button>

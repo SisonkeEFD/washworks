@@ -8,8 +8,6 @@ import leatherBefore from "@/assets/Leather_Shoe_Treatment_1.jpg";
 import leatherAfter from "@/assets/Leather_Shoe_Treatment_2.jpg";
 import kidsBefore from "@/assets/Kids_Sneaker_Wash_1.jpg";
 import kidsAfter from "@/assets/Kids_Sneaker_Wash_2.jpg";
-import carpetBefore from "@/assets/Carpet_Cleaning_Centurion_1.jpg";
-import carpetAfter from "@/assets/Carpet_Cleaning_Centurion_2.jpg";
 import washBefore from "@/assets/Wash_Dry_Fold_1.jpg";
 import washAfter from "@/assets/Wash_Dry_Fold_2.jpg";
 import duvetBefore from "@/assets/Duvet_Blanket_Wash_1.jpg";
@@ -19,7 +17,6 @@ const galleryItems = [
   { before: sneakerBefore, after: sneakerAfter, caption: "Sneaker Cleaning in Centurion", cta: "Book Sneaker Cleaning" },
   { before: leatherBefore, after: leatherAfter, caption: "Leather Shoe Treatment", cta: "Book Leather Shoe Treatment" },
   { before: kidsBefore, after: kidsAfter, caption: "Kids Sneaker Wash", cta: "Book Kids Sneaker Wash" },
-  { before: carpetBefore, after: carpetAfter, caption: "Carpet Cleaning Centurion", cta: "Book Carpet Cleaning" },
   { before: washBefore, after: washAfter, caption: "Wash, Dry & Fold", cta: "Book a Laundry Pickup" },
   { before: duvetBefore, after: duvetAfter, caption: "Duvet & Blanket Wash", cta: "Book Duvet Cleaning" },
 ];
