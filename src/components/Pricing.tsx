@@ -46,8 +46,7 @@ const Pricing = () => {
           >
             {active === 0 && <LaundryTable />}
             {active === 1 && <SneakerTable />}
-            {active === 2 && <CarpetTable />}
-            {active === 3 && <ExtrasTable />}
+            {active === 2 && <ExtrasTable />}
           </motion.div>
         </AnimatePresence>
       </div>
