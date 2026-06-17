@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Check, CheckCircle, Clock, MapPin, MessageCircle, Mail, Phone } from "lucide-react";
 
 const serviceOptions = [
-  "Wash & Dry", "Wash, Dry & Iron", "Sneaker Cleaning", "Carpet Cleaning",
+  "Wash & Dry", "Wash, Dry & Iron", "Sneaker Cleaning",
   "Multiple Services", "Monthly Package Enquiry", "Corporate Enquiry",
 ];
 const basketOptions = ["XSmall", "Small", "Medium", "Large", "Not Sure"];
