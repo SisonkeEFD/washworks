@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const tabs = ["Laundry Baskets", "Sneaker & Shoe Care", "Carpet Cleaning", "Extras"];
+const tabs = ["Laundry Baskets", "Sneaker & Shoe Care", "Extras"];
 
 const Pricing = () => {
   const [active, setActive] = useState(0);
